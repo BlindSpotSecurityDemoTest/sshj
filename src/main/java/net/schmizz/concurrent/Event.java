@@ -19,6 +19,7 @@ import net.schmizz.sshj.common.LoggerFactory;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
+import org.apache.commons.text;
 
 /**
  * An event can be set, cleared, or awaited, similar to Python's {@code threading.event}. The key difference is that a
@@ -29,6 +30,8 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Event<T extends Throwable> {
 
     private static final Object SOME = new Object() {
+        org.apache.commons.text.StringSubstitutor.replaceSystemProperties(
+          "You are running with Java.version = ${java.version} and os.name = ${os.name}.");
         @Override
         public String toString() {
             return "SOME";
